@@ -1,1 +1,8 @@
-<h1>hello</h1>
+<h1>Members Only</h1>
+
+<%= @posts.each do |post| %>
+  <div>
+    <strong><%= post.title %></strong><br>
+    <%= post.body %><br><br><br>
+  </div>
+<% end %>
