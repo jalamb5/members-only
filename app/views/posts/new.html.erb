@@ -1,25 +1,27 @@
-<%= form_with model: @post do |form| %>
-  <div>
-    <% if form.object.errors.any? %>
-      <h2><%= pluralize(form.object.errors.count, "error") %>
-      prohibited this post from being saved:
-      </h2>
-      <ul>
-        <% form.object.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+<div class="posts">
+  <%= form_with model: @post do |form| %>
+    <div>
+      <% if form.object.errors.any? %>
+        <h2><%= pluralize(form.object.errors.count, "error") %>
+        prohibited this post from being saved:
+        </h2>
+        <ul>
+          <% form.object.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
         <% end %>
-      </ul>
-      <% end %>
-  </div>
-  <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-  <div>
-    <%= form.label :body %>
-    <%= form.text_area :body, size: "60x10" %>
-  </div>
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+    </div>
+    <div>
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+    </div>
+    <div>
+      <%= form.label :body %>
+      <%= form.text_area :body, size: "60x10" %>
+    </div>
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>
+</div>
