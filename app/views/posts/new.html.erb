@@ -1,5 +1,16 @@
 <%= form_with model: @post do |form| %>
   <div>
+    <% if form.object.errors.any? %>
+      <h2><%= pluralize(form.object.errors.count, "error") %>
+      prohibited this post from being saved:
+      </h2>
+      <ul>
+        <% form.object.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+  </div>
+  <div>
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
