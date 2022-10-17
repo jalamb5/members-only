@@ -10,3 +10,4 @@ Logged-in users can see author.
 Current State:
 - Login & Signup working
 - Post creation working
+- User shown when signed in, not shown when signed out
