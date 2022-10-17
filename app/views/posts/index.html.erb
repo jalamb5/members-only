@@ -2,14 +2,17 @@
 
 <% if !user_signed_in? %>
     <%= link_to 'sign up', new_user_registration_path %><br><br><br><br>
+    <%= link_to 'sign in', user_session_path %>
     <% else %>
     <%= link_to 'sign out', destroy_user_session_path, data: {turbo_method: :delete } %><br><br><br><br>
 <% end %>
 
-<%= @posts.each do |post| %>
+<% @posts.each do |post| %>
   <div>
     <strong><%= post.title %></strong><br>
-    <%= post.body %><br><br><br>
+    <%= post.body %><br>
+    <%= User.find(post.user_id).email unless !user_signed_in? %>
+    <br><br><br>
   </div>
 <% end %>
 
