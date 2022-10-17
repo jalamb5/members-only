@@ -1,6 +1,6 @@
 # README
 
-Members-Only Project for The Odin Project
+Members-Only Project for The Odin Project - 
 [Full Instructions](https://www.theodinproject.com/lessons/ruby-on-rails-members-only)
 
 Allow users to sign up and create posts.
@@ -10,4 +10,4 @@ Logged-in users can see author.
 Current State:
 - Login & Signup working
 - Post creation working
-- User shown when signed in, not shown when signed out
+- User email shown when signed in, not shown when signed out
