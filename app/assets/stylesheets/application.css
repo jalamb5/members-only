@@ -28,6 +28,14 @@
   grid-column: 1 / span 4;
  }
 
+ a {
+  border: solid #0e4525;
+  border-radius: .5rem;
+  color: #d0b3a6;
+  background-color: #0e4525;
+  padding: 4px;
+ }
+
  .posts {
   grid-column: 2 / 4;
   display: grid;
@@ -35,10 +43,16 @@
   gap: 10px;
  }
 
+ .post {
+  border-top: double 10px;
+  margin-bottom: 10px;
+ }
+
  .links {
   grid-column: 1 / 5;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-left: 4%;
   padding-right: 4%;
  }
