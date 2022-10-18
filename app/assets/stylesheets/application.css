@@ -24,7 +24,6 @@
 
  h1 {
   justify-self: center;
-  /* padding: 15%; */
   grid-column: 1 / span 4;
  }
 
